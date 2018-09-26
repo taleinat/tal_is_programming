@@ -10,11 +10,11 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.gravatar.com/avatar/cd6aae9615c3b36130e2470902833a72?s=256">
 <meta name="twitter:site" content="@taleinat">
-<meta name="twitter:title" content="Decoding Base 64 is Surprisingly Complex">
+<meta name="twitter:title" content="Decoding Base 64">
 <meta name="twitter:description" content="">
         <!-- OG Tags -->
-<meta property="og:url" content="./decoding-base-64-is-surprisingly-complex.html"/>
-<meta property="og:title" content="Tal is Programming | Decoding Base 64 is Surprisingly Complex" />
+<meta property="og:url" content="./decoding-base-64.html"/>
+<meta property="og:title" content="Tal is Programming | Decoding Base 64" />
 <meta property="og:description" content="" />
         <!-- favicon -->
         <link rel="icon" type="image/png" href="./images/favicon.ico">
@@ -75,11 +75,11 @@
         </footer>
         <header>
           <h2>
-            Decoding Base 64 is Surprisingly Complex
+            Decoding Base 64
           </h2>
         </header>
       <div class="content">
-         <p>As a core Python developer, I recently worked on <a href="https://bugs.python.org/issue33770">bug #33770: "base64 throws 'incorrect padding' exception when the issue is NOT with the padding"</a>. It turns out that in addition to failing due to invalid characters or missing padding, base64-decoding can also fail due to invalid length.</p>
+         <p>As a core Python developer, I recently worked on <a href="https://bugs.python.org/issue33770">bug #33770: "base64 throws 'incorrect padding' exception when the issue is NOT with the padding"</a>. It turns out that in addition to failing due to invalid characters or missing padding, decodeing base 64 can also fail due to invalid length.</p>
 <p>The reason: When encoding with base64, the number of output data bytes (not including '=' padding bytes) may be 0, 2, or 3 more than a multiple of 4, <strong>but never 1</strong>:</p>
 <table>
 <thead>
