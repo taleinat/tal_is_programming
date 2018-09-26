@@ -1,0 +1,10 @@
+# Generated files
+output/*
+
+*.py[cod]
+
+# PyCharm
+.idea
+
+# OSX
+.DS_Store
