@@ -81,6 +81,6 @@ def publish(c):
 @task
 def gh_pages(c):
     """Publish to GitHub Pages"""
-    rebuild(c)
+    c.run('pelican -d -s publishconf.py')
     c.run("ghp-import -b {github_pages_branch} {deploy_path} -p".format(
         **CONFIG))
